@@ -1,0 +1,5 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+existing:
+  destination: https://ingamer.com/existing
+  id: 20
