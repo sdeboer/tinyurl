@@ -17,17 +17,17 @@ class LinkTest < ActiveSupport::TestCase
   end
   
   test "token to link_id is correct" do
-    val = Link.short_to_id "y8"
+    val = Link.token_to_id "y8"
     assert_equal val, 20
   end
   
-  test "gives a short token" do
+  test "gives a token" do
     link = Link.find_by(destination: "https://ingamer.com/existing")
-    assert_equal link.short, "y8"
+    assert_equal link.token, "y8"
   end
   
   test "gives a url" do
     link = Link.find_by(destination: "https://ingamer.com/existing")
-    assert_equal link.short_url, "/y8"
+    assert_equal link.token_url, "/y8"
   end
 end
