@@ -16,8 +16,13 @@ class LinkTest < ActiveSupport::TestCase
     assert_not link.valid?
   end
   
-  test "gives a shortened version" do
+  test "gives a short token" do
     link = Link.find_by(destination: "https://ingamer.com/existing")
     assert_equal link.short, 20
+  end
+  
+  test "gives a url" do
+    link = Link.find_by(destination: "https://ingamer.com/existing")
+    assert_equal link.short_url, "/20"
   end
 end
