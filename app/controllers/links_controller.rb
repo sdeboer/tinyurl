@@ -2,7 +2,8 @@ class LinksController < ApplicationController
   before_action :set_link, only: %i[show edit update destroy]
   
   def destination
-    @link = Link.find_by_id params[:token]
+    link_id = Link.short_to_id params[:token]
+    @link = Link.find_by_id link_id
     if @link.nil?
       head :not_found, content_type: "text/html"
     else
