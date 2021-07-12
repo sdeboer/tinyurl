@@ -6,19 +6,23 @@ class LinksController < ApplicationController
     if @link.nil?
       head :not_found, content_type: "text/html"
     else
-      @hit = Hit.create link: @link, address: request.env['REMOTE_ADDR']
+      @hit = Hit.create link: @link, address: request.remote_ip
       redirect_to @link.destination
     end
   end
+
+  def show
+    @hits = @link.hits
+  end
+  
+  
+  ##  BOILER PLATE BELOW HERE!
 
   def index
     @links = Link.all
   end
 
   def edit
-  end
-
-  def show
   end
 
   def new

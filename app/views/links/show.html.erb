@@ -5,5 +5,26 @@
   <%= @link.destination %>
 </p>
 
+<p>
+  <strong>Token:</strong>
+  <%= @link.short %>
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>IP Addresses</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <% @hits.each do |hit| %>
+    <tr>
+      <td><%= hit.address.to_string %></td>
+    </tr>  
+    <% end %>
+  </tbody>
+</table>
+
 <%= link_to 'Edit', edit_link_path(@link) %> |
 <%= link_to 'Back', links_path %>
