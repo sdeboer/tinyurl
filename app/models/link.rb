@@ -1,4 +1,5 @@
 class Link < ApplicationRecord
+    has_many :hits
     validates_presence_of :destination
     validates_uniqueness_of :destination
     
