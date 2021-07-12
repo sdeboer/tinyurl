@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Creates a tiny tinyurl service.
 
-Things you may want to cover:
+The ability to add/edit/update links should really be protected somehow,
+if this was real.
 
-* Ruby version
+Instead just go to the index to do all the important things.  Except go
+to links that have been saved.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To do that go to /:token.
