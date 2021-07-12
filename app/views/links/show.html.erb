@@ -1,2 +1,9 @@
-<h1>Links#show</h1>
-<p>Find me in app/views/links/show.html.erb</p>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Destination:</strong>
+  <%= @link.destination %>
+</p>
+
+<%= link_to 'Edit', edit_link_path(@link) %> |
+<%= link_to 'Back', links_path %>
